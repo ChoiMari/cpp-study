@@ -1,3 +1,11 @@
+# 포함 해야될 파일들 
+# .cpp  
+#.h
+#.sin
+#.vcxproj
+# .vcxproj.filters 이건 상황에 따라.. 가상 폴더로 나눠서 보이게 해주는 역할(IDE에서 폴더 트리 보이게 해줌)
+
+
 # Prerequisites
 *.d
 
@@ -30,3 +38,94 @@
 *.exe
 *.out
 *.app
+
+# 빌드 아티팩트 (컴파일된 파일들)
+# 빌드 및 컴파일 과정에서 생성되는 파일들은 버전 관리에서 제외해야 합니다.
+# - /build/, /bin/, /obj/, /out/ 등의 디렉토리는 빌드 출력물입니다.
+# - *.exe, *.out, *.o, *.a, *.so, *.dylib, *.dll 등은 플랫폼에 따라 생성되는 실행 파일 및 라이브러리 파일들입니다.
+build/
+bin/
+obj/
+out/
+*.exe
+*.out
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+
+# CMake 관련 파일
+# CMake에서 생성하는 캐시 파일 및 빌드 디렉토리 관련 파일들입니다.
+# - CMakeLists.txt.user: 사용자가 설정한 CMake 설정 정보 파일
+# - CMakeCache.txt, cmake_install.cmake, CMakeFiles/: CMake 빌드 관련 파일들
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+
+# Visual Studio 관련 파일
+# Visual Studio IDE에서 생성되는 설정 및 프로젝트 파일들입니다.
+# - .vs/: Visual Studio에서 생성한 설정 디렉토리
+# - *.vcxproj*: 프로젝트 파일, *.user, *.suo: 사용자 설정 파일들
+.vs/
+.vscode/
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+
+*.user
+*.suo
+
+# x64 빌드 출력물
+/x64/
+
+# Visual Studio 사용자 설정 파일 무시
+*.vcxproj.user
+
+# Code::Blocks 관련 파일
+# Code::Blocks IDE에서 생성하는 프로젝트 파일들입니다.
+*.cbp
+*.layout
+
+# Eclipse 관련 파일
+# Eclipse IDE에서 생성하는 프로젝트 설정 파일들입니다.
+/.project
+/.cproject
+/.settings/
+
+# Xcode 관련 파일
+# Xcode에서 생성하는 설정 및 프로젝트 파일들입니다.
+# - xcuserdata/: Xcode 사용자 데이터
+# - *.xccheckout, *.xcodeproj, *.xcodeproj/project.xcworkspace/: 프로젝트 관련 파일들
+xcuserdata/
+*.xccheckout
+*.xcodeproj/*
+*.xcodeproj/project.xcworkspace/*
+
+# 기타 파일들
+# - *.log: 로그 파일
+# - *.swp: vim 등의 편집기에서 생성하는 임시 파일
+# - *~: 백업 파일
+*.log
+*.swp
+*~
+
+# 빌드 아티팩트
+**/x64/
+**/Debug/
+*.pdb
+*.idb
+*.ilk
+*.tlog
+*.lastbuildstate
+*.exe.recipe
+*.obj
+*.log
+*.user
+*.suo
+*.cache
+*.ipch
+*.db
+
+
