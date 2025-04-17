@@ -57,3 +57,54 @@ int main() {
 
 	return 0;
 }
+
+/*
+문제1 해답
+#include <iostream>
+
+int main() {
+
+	int no;
+	std::cout << "자연수를 입력하세요.";
+
+	std::cin >> no;
+
+	if (no < 0) {
+		std::cout << "잘못 입력했습니다.";
+	}
+	else if (no == 0) {
+		std::cout << "숫자 0을 입력했습니다.";
+	}
+	else if (no % 2 == 0) {
+		for (int i = 0; i < 4; i++) {
+			std::cout << no << "\n";
+		}
+	}
+	else if (no % 2 == 1) {
+		for (int i = 0; i < 3; i++) {
+			std::cout << no << "\n";
+		}
+	}
+	return 0;
+}
+*/
+
+/* 문제 2 해답
+#include <iostream>
+
+int main() {
+
+	int no;
+	std::cout << "숫자를 입력하세요.";
+
+	std::cin >> no;
+
+	for (int i = 1; i <= no; i++) {
+		for (int j = 0; j < i; j++) {
+			std::cout << i << " ";
+		}
+	}
+
+	return 0;
+}
+*/
