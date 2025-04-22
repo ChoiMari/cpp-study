@@ -58,3 +58,41 @@ int main() {
 
 	return 0;
 }
+
+/*
+해답
+#include <iostream>
+#include <fstream>
+#include <string>
+
+int main() {
+
+	std::ifstream my_file3;
+	std::string name, pw;
+	std::string str1, str2;
+
+	my_file3.open("member.txt");
+	std::cout << "이름을 입력하세요.";
+	std::cin >> name;
+
+	std::cout << "비번을 입력하세요.";
+	std::cin >> pw;
+
+	while (my_file3 >> str1 >> str2) {
+		if (name == str1) {
+			if (pw == str2) {
+				std::cout << "success";
+				break;
+			}  else {
+				std::cout << "fail";
+				break;
+			}
+		}
+	}
+
+	my_file3.close();
+
+	return 0;
+}
+
+*/
